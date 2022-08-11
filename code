@@ -1,0 +1,7 @@
+System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		driver.get("https://demo.actitime.com/login.do");
+    driver.findElement(By.id("username")).sendkeys("admin");
+    driver.findElement(By.name("pwd")).sendkeys("manager");
+    driver.findElement(By.id("loginbutton")).click();
